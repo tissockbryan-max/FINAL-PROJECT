@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  color: var(--secon-color);
+}
+
+.border {
+  border: 1px solid grey;
+}
+
+:root {
+  --main-color: hsl(0, 0%, 100%);
+  --prim-color: hsl(0, 100%, 60%);
+  --shadow-color: hsl(0, 100%, 70%);
+  --secon-color: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 60%);
+}
+body {
+  background: var(--main-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+section {
+  width: 100%;
+  /* padding: 3rem; */
+}
+
+section #container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 100vh;
+  padding: 3rem;
+  box-shadow: 2px 4px 8px rgba(255, 102, 102, 0.15);
+}
+
+section #container #landing-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5rem;
+}
+
+section #container #landing-info h1 {
+  color: var(--prim-color);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+section #container #landing-info p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+section #container #landing-info #badges {
+  display: flex;
+  gap: 2rem;
+}
+
+section #container #landing-info #badges div {
+  border: 2px solid var(--shadow-color);
+  padding: 1rem;
+  border-radius: 2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+section #container #landing-info #badges div span {
+  color: var(--shadow-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
