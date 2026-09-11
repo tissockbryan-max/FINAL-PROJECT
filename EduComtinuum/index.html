@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EduContinuum</title>
     <link rel="stylesheet" href="./Styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <section>
@@ -25,30 +32,30 @@
         <div id="starting-form">
           <form action="" method="get">
             <h2>Get Started</h2>
-            <div class="form-group">
-              <label for="student-name">Full Name</label>
+            <div id="form-group">
+              <i class="fa-solid fa-user"></i>
               <input
                 type="text"
                 id="student-name"
-                placeholder="Enter your full name"
+                placeholder="Full Name"
                 autocomplete="name"
                 required
               />
             </div>
 
-            <div class="form-group">
-              <label for="student-name">Email</label>
+            <div id="form-group">
+              <i class="fa-solid fa-envelope"></i>
               <input
                 type="email"
                 id="student-email"
-                placeholder="Enter your email"
+                placeholder="Email Address"
                 autocomplete="email"
                 required
               />
             </div>
 
-            <div class="form-group">
-              <label for="student-class">Class</label>
+            <div id="form-group">
+              <i class="fa-solid fa-graduation-cap"></i>
               <select id="student-class" required>
                 <option value="">Select your class</option>
                 <option value="Form 1">Form 1</option>
@@ -61,12 +68,12 @@
               </select>
             </div>
 
-            <div class="form-group">
-              <label for="student-school">School Name</label>
+            <div id="form-group">
+              <i class="fa-solid fa-school"></i>
               <input
                 type="text"
                 id="student-school"
-                placeholder="Enter your school name"
+                placeholder="School Name"
                 required
               />
             </div>
