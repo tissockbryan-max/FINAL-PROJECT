@@ -33,7 +33,6 @@ section #container {
   grid-template-columns: 50% 50%;
   min-height: 100vh;
   padding: 3rem;
-  box-shadow: 2px 4px 8px rgba(255, 102, 102, 0.15);
 }
 
 section #container #landing-info {
