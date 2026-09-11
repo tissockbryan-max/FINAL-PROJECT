@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   color: var(--secon-color);
 }
 
@@ -19,60 +19,77 @@
 body {
   background: var(--main-color);
   font-family: Arial, sans-serif;
-  display: flex;
-  min-height: 100vh;
+  min-width: 320px;
 }
 
 section {
   width: 100%;
-  padding: 1rem;
+  padding: clamp(0.75rem, 2vw, 2rem);
 }
 
 section #container {
-  /* border: 1px solid var(--shadow-color); */
   display: grid;
-  grid-template-columns: 50% 50%;
-  min-height: 100vh;
-  /* padding: 0rem 2rem; */
-  border-radius: 2rem;
-  /* box-shadow: 0 0 10px var(--secon-color); */
+  grid-template-columns: minmax(0, 1.1fr) minmax(22rem, 0.9fr);
+  align-items: center;
+  min-height: calc(100vh - 2 * clamp(0.75rem, 2vw, 2rem));
+  gap: clamp(2rem, 6vw, 7rem);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 section #container #landing-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1.25rem, 3vw, 2rem);
   text-align: center;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  line-height: 1.5rem;
-  padding: 0rem 2rem;
+  line-height: 1.5;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+section #container #landing-info #logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  max-width: 100%;
+}
+
+section #container #landing-info #logo-name i {
+  color: var(--prim-color);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1;
 }
 
 section #container #landing-info h1 {
   color: var(--prim-color);
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
   font-weight: 700;
-  margin-bottom: 2rem;
 }
 
 section #container #landing-info p {
-  font-size: 1.5rem;
+  max-width: 40rem;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-weight: 600;
-  line-height: 2rem;
+  line-height: 1.6;
 }
 
 section #container #landing-info #badges {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 section #container #landing-info #badges div {
   border: 2px solid var(--shadow-color);
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 2rem;
   font-weight: 600;
+  font-size: clamp(0.8rem, 1.4vw, 1rem);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -87,26 +104,26 @@ section #container #landing-info #badges div span {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0rem 2rem;
+  width: 100%;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 #starting-form form {
-  width: 50%;
+  width: min(100%, 27rem);
   border: 1px solid var(--shadow-color);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 5rem 3rem;
+  gap: clamp(0.75rem, 2vw, 1rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
   border-radius: 1rem;
-  box-shadow: 0 0 10px var(--shadow -color);
+  box-shadow: 0 0 10px var(--shadow-color);
 }
 
 #starting-form form h2 {
   color: var(--prim-color);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
   text-align: center;
 }
 
@@ -116,6 +133,7 @@ section #container #landing-info #badges div span {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  min-width: 0;
 }
 
 #starting-form form #form-group i {
@@ -128,7 +146,8 @@ section #container #landing-info #badges div span {
 #starting-form form #form-group select {
   outline: none;
   width: 100%;
-  padding: 0.5rem;
+  min-width: 0;
+  padding: 0.7rem;
   border: 1px solid var(--shadow-color);
   font-size: 0.875rem;
 }
@@ -144,7 +163,7 @@ section #container #landing-info #badges div span {
   padding: 0.5rem;
   border: none;
   border-radius: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -165,4 +184,65 @@ section #container #landing-info #badges div span {
 
 #starting-form form button:hover span {
   transform: translateX(10px);
+}
+
+@media (max-width: 900px) {
+  section #container {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.85fr);
+    gap: 1rem;
+  }
+
+  section #container #landing-info {
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  section #container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+
+  section #container #landing-info {
+    padding-top: clamp(1.5rem, 8vw, 3rem);
+  }
+
+  #starting-form {
+    padding: 0 0 clamp(1.5rem, 6vw, 3rem);
+  }
+
+  #starting-form form {
+    max-width: 32rem;
+  }
+}
+
+@media (max-width: 420px) {
+  section {
+    padding: 0.75rem;
+  }
+
+  section #container #landing-info p {
+    font-size: 1rem;
+  }
+
+  section #container #landing-info #logo-name {
+    gap: 0.5rem;
+  }
+
+  section #container #landing-info #logo-name i {
+    font-size: 2rem;
+  }
+
+  section #container #landing-info #badges {
+    width: 100%;
+  }
+
+  section #container #landing-info #badges div {
+    width: 100%;
+  }
+
+  #starting-form form #form-group i {
+    font-size: 0.9rem;
+  }
 }
