@@ -25,14 +25,17 @@ body {
 
 section {
   width: 100%;
-  /* padding: 3rem; */
+  padding: 1rem;
 }
 
 section #container {
+  /* border: 1px solid var(--shadow-color); */
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: 100vh;
-  padding: 3rem;
+  padding: 0rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px var(--secon-color);
 }
 
 section #container #landing-info {
