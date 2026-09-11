@@ -192,6 +192,10 @@ section #container #landing-info #badges div span {
     gap: 1rem;
   }
 
+  section {
+    padding: 1rem;
+  }
+
   section #container #landing-info {
     padding-inline: 0;
   }
@@ -244,5 +248,140 @@ section #container #landing-info #badges div span {
 
   #starting-form form #form-group i {
     font-size: 0.9rem;
+  }
+}
+
+/* Dashboard navigation */
+header {
+  width: 100%;
+  min-height: 4.5rem;
+  padding: 0.75rem clamp(1rem, 4vw, 4rem);
+  background: var(--main-color);
+  border-bottom: 2px solid var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#logo-container a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--prim-color);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#logo-container i {
+  color: var(--prim-color);
+  font-size: 1.35em;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1.75rem);
+  list-style: none;
+}
+
+header nav a {
+  display: block;
+  padding: 0.65rem 0.25rem;
+  color: var(--secon-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: var(--prim-color);
+  border-bottom-color: var(--prim-color);
+}
+
+#name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
+#name-container h3 {
+  color: var(--secon-color);
+  font-size: 0.95rem;
+}
+
+#first-letter {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--prim-color);
+  color: var(--main-color);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+#hamburger-menu,
+#cancel {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--prim-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  header {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+    order: 4;
+  }
+
+  header nav ul {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--shadow-color);
+  }
+
+  header nav a {
+    padding: 0.85rem 0.5rem;
+    border-bottom: 1px solid hsl(0, 100%, 90%);
+  }
+
+  #name-container {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: block;
+    order: 3;
+  }
+
+  #cancel {
+    order: 3;
+  }
+
+  header.menu-open nav {
+    display: block;
+  }
+
+  header.menu-open #hamburger-menu {
+    display: none;
+  }
+
+  header.menu-open #cancel {
+    display: block;
   }
 }

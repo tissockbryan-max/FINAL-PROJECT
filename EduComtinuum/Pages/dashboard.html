@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -15,27 +15,37 @@
   </head>
   <body>
     <header>
-      <div id="logo-container"><a href="#">EduContinuum</a></div>
+      <div id="logo-container">
+        <a href="../index.html">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>EduContinuum</span>
+        </a>
+      </div>
       <nav>
         <ul>
-          <li><a href="">Dashboard</a></li>
-          <li><a href="">Resources</a></li>
-          <li><a href="">Teachers</a></li>
-          <li><a href="">Progress</a></li>
+          <li><a class="active" href="dashboard.html">Dashboard</a></li>
+          <li><a href="Pages/resources.html">Resources</a></li>
+          <li><a href="Pages/teachers.html">Teachers</a></li>
+          <li><a href="Pages/completed.html">Progress</a></li>
         </ul>
       </nav>
 
       <div id="name-container">
         <div id="first-letter"></div>
-        <h3>Student</h3>
+        <h3 id="name"></h3>
       </div>
 
-      <div id="hamburger-menu">
+      <button
+        id="hamburger-menu"
+        type="button"
+        aria-label="Open navigation menu"
+      >
         <i class="fa-solid fa-bars"></i>
-      </div>
-      <div id="cancel">
+      </button>
+      <button id="cancel" type="button" aria-label="Close navigation menu">
         <i class="fa-solid fa-circle-xmark"></i>
-      </div>
+      </button>
     </header>
+    <script src="../Scripts/script.js"></script>
   </body>
 </html>
