@@ -19,12 +19,15 @@ if (submitForm) {
 }
 
 const firstLetter = document.getElementById("first-letter");
-const name = document.getElementById("name");
+const userName = document.getElementById("name");
 const savedStudentName = localStorage.getItem("studentName");
+const name0nWelcome = document.getElementById("welcome-name");
 
-if (firstLetter && name) {
+name0nWelcome.textContent = savedStudentName;
+
+if (firstLetter && userName) {
   firstLetter.textContent = savedStudentName.charAt(0).toUpperCase();
-  name.textContent = savedStudentName;
+  userName.textContent = savedStudentName;
 }
 
 let header = document.querySelector("header");
