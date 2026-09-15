@@ -10,7 +10,8 @@
 }
 
 :root {
-  --main-color: hsl(0, 0%, 100%);
+  --main-color: hsl(183, 100%, 97%);
+  --main-white-color: hsl(0, 0%, 100%);
   --prim-color: hsl(0, 100%, 60%);
   --shadow-color: hsl(0, 100%, 70%);
   --secon-color: hsl(0, 0%, 20%);
@@ -400,7 +401,7 @@ header nav a.active {
   flex-direction: row;
   margin-top: 4rem;
   /* box-shadow: 1px 1px 5px var(--secon-color); */
-  border: 1px solid var(--text-color);
+  /* border: 1px solid var(--text-color); */
 }
 
 #hero-section #welcome-message span {
@@ -421,17 +422,56 @@ header nav a.active {
   padding: 2rem;
 }
 
+#hero-section #welcome-message #welcome-list li {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 #hero-section #welcome-message #headlines {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
 #hero-section #welcome-message #headlines p {
   color: var(--prim-color);
+}
+
+#hero-section #welcome-message #cta-btns {
+  max-width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#hero-section #welcome-message #cta-btns button {
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--main-white-color);
+  background-color: var(--prim-color);
+  cursor: pointer;
+  transition:
+    box-shadow 0.5s ease-in-out,
+    border-radius 0.5s ease-in;
+}
+
+/* 
+#hero-section #welcome-message #cta-btns #resource-btn,
+#hero-section #welcome-message #cta-btns #teacher-btn {
+  transition: box-shadow 0.5 ease-in-out;
+} */
+
+#hero-section #welcome-message #cta-btns #resource-btn:hover,
+#hero-section #welcome-message #cta-btns #teacher-btn:hover {
+  box-shadow: 0px 0px 20px var(--shadow-color);
+  border-radius: 1rem;
 }
 
 #hero-section #welcome-image {
