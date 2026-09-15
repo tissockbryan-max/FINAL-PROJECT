@@ -399,7 +399,8 @@ header nav a.active {
   padding: 2rem;
   flex-direction: row;
   margin-top: 4rem;
-  box-shadow: 1px 1px 5px var(--secon-color);
+  /* box-shadow: 1px 1px 5px var(--secon-color); */
+  border: 1px solid var(--text-color);
 }
 
 #hero-section #welcome-message span {
