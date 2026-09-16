@@ -267,6 +267,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  z-index: 100;
 }
 
 #logo-container a {
@@ -484,6 +485,7 @@ header nav a.active {
 #hero-section #welcome-image img {
   display: block;
   width: 100%;
+  border-radius: 1rem;
   object-fit: cover;
   object-position: center;
 }
@@ -536,15 +538,15 @@ section #subject-grid #subject-card {
   box-shadow: 0px 0px 5px var(--text-color);
   padding: 2rem 3rem;
   border-radius: 1rem;
-  transition: all 0.5s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 section #subject-grid #subject-card:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-0.75rem);
 }
 
 section #subject-grid #subject-card #subject-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: start;
 }
 
@@ -552,7 +554,7 @@ section #subject-grid #subject-card h3 {
   font-size: 1.5rem;
   color: var(--prim-color);
   font-family: system-ui;
-  transition: all 0.5s ease-in;
+  transition: all 0.8s ease-in;
 }
 
 section #subject-grid #subject-card:hover h3 {
@@ -588,7 +590,7 @@ section #subject-grid #subject-card #btn {
   color: var(--main-white-color);
   background-color: var(--prim-color);
   cursor: pointer;
-  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.8s ease-in-out;
 }
 
 section #subject-grid #subject-card #btn:hover {
