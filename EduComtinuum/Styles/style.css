@@ -257,7 +257,7 @@ section #container #landing-info #badges div span {
 /* Dashboard navigation */
 header {
   width: 100%;
-  min-height: 4.5rem;
+  min-height: 6rem;
   padding: 0.75rem clamp(1rem, 4vw, 4rem);
   /* background: var(--main-color); */
   border-bottom: 2px solid var(--shadow-color);
