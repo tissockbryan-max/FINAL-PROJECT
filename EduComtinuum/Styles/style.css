@@ -492,13 +492,16 @@ header nav a.active {
   margin-top: 2rem;
 }
 
-#subject-section {
-  /* border: 1px solid black; */
-}
-
 section #subject-section-header {
   padding: 0rem 3rem;
   margin-bottom: 2rem;
+}
+
+section #subject-section-header span {
+  text-transform: uppercase;
+  color: var(--shadow-color);
+  font-weight: 700;
+  font-size: clamp(0.6rem, 1vw, 0.6rem);
 }
 
 section #subject-section-header h2 {
