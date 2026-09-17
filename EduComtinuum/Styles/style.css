@@ -160,7 +160,7 @@ section #container #landing-info #badges div span {
 
 #starting-form form #form-group input:focus,
 #starting-form form #form-group select:focus {
-  border: 1px solid var(--prim-color);
+  /* border: 1px solid var(--prim-color); */
   box-shadow: 0px 0px 10px var(--main-color);
 }
 
@@ -191,6 +191,91 @@ section #container #landing-info #badges div span {
 
 #starting-form form button:hover span {
   transform: translateX(10px);
+}
+
+section #call-for-action-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 3rem;
+}
+
+section #call-for-action-section #section-2-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section #call-for-action-section #section-2-header p {
+  color: var(--shadow-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+section #call-for-action-section #section-2-grid {
+  /* border: 1px solid blue; */
+  padding: 0rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+section #call-for-action-section #section-2-grid #cta-card {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 5px var(--secon-color);
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  transition: all 0.5s ease-out;
+}
+
+section #call-for-action-section #section-2-grid #cta-card:hover {
+  transform: translateY(-0.75rem);
+}
+
+section #call-for-action-section #section-2-grid #cta-card #cta-icon {
+  font-size: 2rem;
+}
+/* 
+section #call-for-action-section #section-2-grid #cta-card h3 {
+} */
+
+section #call-for-action-section #section-2-grid #cta-card p {
+  text-align: center;
+  color: var(--text-color);
+}
+
+section #call-for-action-section #section-2-start {
+  /* border: 1px solid blueviolet; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  margin: 2rem 0rem;
+}
+
+section #call-for-action-section #section-2-start a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  background: var(--prim-color);
+  color: var(--main-white-color);
+}
+
+section #call-for-action-section #section-2-start a:hover {
+  box-shadow: 0px 0px 10px var(--prim-color);
 }
 
 @media (max-width: 900px) {
