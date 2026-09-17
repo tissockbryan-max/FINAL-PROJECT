@@ -66,6 +66,10 @@ section #container #landing-info #logo-name i {
   line-height: 1;
 }
 
+section #container #landing-info #logo-name h1 {
+  text-shadow: 0px 0px 5px var(--prim-color);
+}
+
 section #container #landing-info h1 {
   color: var(--prim-color);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -89,12 +93,17 @@ section #container #landing-info #badges {
 
 section #container #landing-info #badges div {
   border: 2px solid var(--shadow-color);
-  padding: 0.5rem 0.75rem;
-  border-radius: 2rem;
+  padding: 1rem 0.75rem;
+  border-radius: 1rem;
   font-weight: 600;
   font-size: clamp(0.8rem, 1.4vw, 1rem);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+}
+
+section #container #landing-info #badges div:hover {
+  background-color: var(--main-white-color);
+  color: var(--shadow-color);
 }
 
 section #container #landing-info #badges div span {
@@ -141,7 +150,7 @@ section #container #landing-info #badges div span {
 }
 
 #starting-form form #form-group i {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--main-white-color);
   font-weight: 600;
   margin-right: 0.5rem;
@@ -212,7 +221,7 @@ section #call-for-action-section #section-2-header p {
 
 section #call-for-action-section #section-2-grid {
   /* border: 1px solid blue; */
-  padding: 0rem 5rem;
+  padding: 0rem 10rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -240,9 +249,10 @@ section #call-for-action-section #section-2-grid #cta-card:hover {
 section #call-for-action-section #section-2-grid #cta-card #cta-icon {
   font-size: 2rem;
 }
-/* 
+
 section #call-for-action-section #section-2-grid #cta-card h3 {
-} */
+  text-align: center;
+}
 
 section #call-for-action-section #section-2-grid #cta-card p {
   text-align: center;
