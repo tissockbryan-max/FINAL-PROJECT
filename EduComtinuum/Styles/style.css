@@ -699,3 +699,88 @@ section #subject-grid #subject-card #btn:hover {
 #navigation-container #navigation-grid #navigation-card #btn:hover {
   box-shadow: 0px 0px 20px var(--shadow-color);
 }
+
+footer {
+  border-top: 3px solid var(--shadow-color);
+  background-color: var(--main-white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+footer #top-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+footer #top-box #left {
+  width: 50%;
+}
+
+footer #top-box #left h3,
+p {
+  margin-bottom: 0.75rem;
+}
+
+footer #top-box #left p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+footer #top-box #left small {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--prim-color);
+  transition: all 0.5s ease-in-out;
+}
+
+footer #top-box #left small:hover {
+  text-shadow: 0px 0px 5px var(--prim-color);
+}
+
+footer #right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer #right h3 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+footer #right a {
+  color: var(--text-color);
+  margin-right: 1rem;
+  transition: all 0.8s ease-in-out;
+}
+
+footer #right a:hover {
+  color: var(--secon-color);
+}
+
+footer #bottom-box {
+  width: 50%;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  border-top: 2px solid var(--text-color);
+  padding-top: 2rem;
+  color: var(--text-color);
+}
+
+footer #bottom-box a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: all 0.8s ease-in-out;
+}
+
+footer #bottom-box a:hover {
+  color: var(--secon-color);
+}
