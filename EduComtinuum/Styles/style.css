@@ -587,6 +587,7 @@ header nav a.active {
   border-radius: 1rem;
   object-fit: cover;
   object-position: center;
+  overflow: hidden;
 }
 
 #section-2 {
