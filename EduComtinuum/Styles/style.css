@@ -531,7 +531,6 @@ header nav a.active {
 #hero-section #welcome-message #headlines {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
   font-weight: 600;
   font-size: 0.5rem;
 }
