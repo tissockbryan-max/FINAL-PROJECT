@@ -115,16 +115,17 @@ section #container #landing-info #badges div span {
   width: min(100%, 27rem);
   border: 1px solid var(--shadow-color);
   display: flex;
+  background-color: var(--prim-color);
   flex-direction: column;
   gap: clamp(0.75rem, 2vw, 1rem);
   padding: clamp(1.5rem, 4vw, 3rem);
   border-radius: 1rem;
-  box-shadow: 0 0 10px var(--shadow-color);
+  box-shadow: 0 0 15px var(--shadow-color);
 }
 
 #starting-form form h2 {
-  color: var(--prim-color);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--main-white-color);
+  font-size: clamp(2rem, 3vw, 2rem);
   font-weight: 700;
   margin-bottom: clamp(1rem, 3vw, 2rem);
   text-align: center;
@@ -141,7 +142,7 @@ section #container #landing-info #badges div span {
 
 #starting-form form #form-group i {
   font-size: 1rem;
-  color: var(--prim-color);
+  color: var(--main-white-color);
   font-weight: 600;
   margin-right: 0.5rem;
 }
@@ -152,17 +153,20 @@ section #container #landing-info #badges div span {
   min-width: 0;
   padding: 0.7rem;
   border: 1px solid var(--shadow-color);
+  border-radius: 1rem;
   font-size: 0.875rem;
+  transition: all 0.5s ease-in-out;
 }
 
 #starting-form form #form-group input:focus,
 #starting-form form #form-group select:focus {
   border: 1px solid var(--prim-color);
+  box-shadow: 0px 0px 10px var(--main-color);
 }
 
 #starting-form form button {
-  background: var(--prim-color);
-  color: var(--main-color);
+  background: var(--shadow-color);
+  color: var(--main-white-color);
   padding: 0.5rem;
   border: none;
   border-radius: 0.5rem;
