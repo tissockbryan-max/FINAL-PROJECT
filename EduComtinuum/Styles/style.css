@@ -1289,6 +1289,132 @@ footer #bottom-box {
   }
 }
 
-section #teachers-section {
-  border: 1px solid red;
+#teachers-section {
+  width: min(100%, 1200px);
+  margin-inline: auto;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(0.75rem, 4vw, 3rem);
+}
+
+#teachers-section #teachers-section-header {
+  max-width: 48rem;
+  margin-bottom: 2rem;
+}
+
+#teachers-section #teachers-section-header #teacher-tag {
+  font-size: 0.6rem;
+  color: var(--shadow-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#teachers-section #teachers-section-header #teachers-heading {
+  font-weight: 600;
+  color: var(--secon-color);
+}
+
+#teachers-section #teachers-section-header p {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+#teachers-section #teachers-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 15rem));
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(2rem, 5vw, 5rem);
+}
+
+#teachers-section #teachers-grid #teacher-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 0px 5px var(--text-color);
+  border-radius: 1rem;
+  min-width: 0;
+  padding: clamp(1.25rem, 4vw, 2rem) 1rem;
+  text-align: center;
+  gap: 0.75rem;
+  transition: all 0.5s ease-in-out;
+}
+
+#teachers-section #teachers-grid #teacher-card:hover {
+  transform: translateY(-0.75rem);
+}
+
+#teachers-section #teachers-grid #teacher-card #teacher-icon {
+  box-shadow: 0px 0px 5px var(--text-color);
+  background-color: var(--main-white-color);
+  padding: 0.6rem;
+  border-radius: 100%;
+}
+
+#teachers-section #teachers-grid #teacher-card #teacher-subject-tag {
+  color: var(--shadow-color);
+  font-size: 0.65rem;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+#teachers-section #teachers-grid #teacher-card:hover #teacher-subject-tag {
+  text-shadow: 0px 0px 5px var(--shadow-color);
+}
+
+#teachers-section #teachers-grid #teacher-card #teacher-desc {
+  color: var(--text-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+#teachers-section #teachers-grid #teacher-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--prim-color);
+  color: var(--main-white-color);
+  transition: all 0.5s ease-in-out;
+}
+
+#teachers-section #teachers-grid #teacher-card a:hover {
+  box-shadow: 0px 0px 10px var(--prim-color);
+}
+
+@media (max-width: 760px) {
+  #teachers-section #teachers-section-header {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  #teachers-section #teachers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 15rem));
+  }
+}
+
+@media (max-width: 480px) {
+  #teachers-section {
+    padding-inline: 0.75rem;
+  }
+
+  #teachers-section #teachers-section-header #teachers-heading {
+    font-size: clamp(1.75rem, 9vw, 2.5rem);
+  }
+
+  #teachers-section #teachers-section-header p {
+    font-size: 0.875rem;
+  }
+
+  #teachers-section #teachers-grid {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 2rem;
+  }
 }
