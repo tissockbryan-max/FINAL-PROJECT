@@ -22,8 +22,26 @@ body {
   background: var(--main-color);
   font-family: Arial, sans-serif;
   min-width: 320px;
-  height: 1000px;
+  /* height: 1000px; */
   /* background-color: var(--main-color); */
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+body main section div {
+  animation: appear 1s ease-in;
+  animation-timeline: view();
+  animation-range: entry 0 cover 15%;
 }
 
 section {
