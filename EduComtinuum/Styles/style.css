@@ -354,6 +354,170 @@ section #call-for-action-section #section-2-start a:hover {
   }
 }
 
+/* index.html responsive layout */
+body:has(#landing-info) {
+  min-width: 320px;
+  height: auto;
+  overflow-x: hidden;
+}
+
+body:has(#landing-info) section {
+  width: 100%;
+  padding: clamp(0.75rem, 3vw, 2rem);
+}
+
+body:has(#landing-info) #container {
+  width: min(100%, 1400px);
+  min-height: calc(100vh - 4rem);
+  margin-inline: auto;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: clamp(1.5rem, 5vw, 6rem);
+}
+
+body:has(#landing-info) #landing-info,
+body:has(#landing-info) #starting-form {
+  min-width: 0;
+  width: 100%;
+}
+
+body:has(#landing-info) #landing-heading {
+  max-width: 100%;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  overflow-wrap: anywhere;
+}
+
+body:has(#landing-info) #landing-passage {
+  max-width: 42rem;
+  font-size: clamp(0.95rem, 2vw, 1.35rem);
+}
+
+body:has(#landing-info) #badges {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+body:has(#landing-info) #badges div {
+  max-width: 100%;
+}
+
+body:has(#landing-info) #starting-form {
+  padding: 0;
+}
+
+body:has(#landing-info) #submit-form {
+  width: min(100%, 28rem);
+  margin-inline: auto;
+}
+
+body:has(#landing-info) #form-group {
+  width: 100%;
+}
+
+body:has(#landing-info) #form-group input,
+body:has(#landing-info) #form-group select {
+  width: 100%;
+  min-width: 0;
+}
+
+body:has(#landing-info) #section-2-grid {
+  width: min(100%, 1200px);
+  margin-inline: auto;
+  padding: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body:has(#landing-info) #cta-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow-wrap: anywhere;
+}
+
+body:has(#landing-info) #section-2-start {
+  padding-inline: 1rem;
+}
+
+@media (max-width: 900px) {
+  body:has(#landing-info) #container {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr);
+    gap: 1.5rem;
+  }
+
+  body:has(#landing-info) #section-2-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  body:has(#landing-info) #container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 2rem;
+    padding-block: 1.5rem;
+  }
+
+  body:has(#landing-info) #landing-info {
+    padding: 0;
+  }
+
+  body:has(#landing-info) #starting-form {
+    padding: 0;
+  }
+
+  body:has(#landing-info) #submit-form {
+    max-width: 34rem;
+  }
+
+  body:has(#landing-info) #section-2-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(#landing-info) #section-2-start a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  body:has(#landing-info) section {
+    padding-inline: 0.75rem;
+  }
+
+  body:has(#landing-info) #logo-name {
+    flex-direction: column;
+  }
+
+  body:has(#landing-info) #landing-heading {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  body:has(#landing-info) #badges {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body:has(#landing-info) #badges div {
+    width: 100%;
+    text-align: center;
+  }
+
+  body:has(#landing-info) #submit-form {
+    padding: 1.25rem;
+  }
+
+  body:has(#landing-info) #cta-card {
+    padding: 1.25rem;
+  }
+
+  body:has(#landing-info) footer #top-box,
+  body:has(#landing-info) footer #bottom-box {
+    width: 100%;
+  }
+}
+
 /* Dashboard navigation */
 header {
   width: 100%;
@@ -883,4 +1047,243 @@ footer #bottom-box a {
 
 footer #bottom-box a:hover {
   color: var(--secon-color);
+}
+
+/* Responsive overrides */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  height: auto;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Landing page */
+section #container {
+  width: min(100% - 2rem, 1400px);
+}
+
+section #call-for-action-section {
+  width: min(100%, 1400px);
+  margin-inline: auto;
+  padding-inline: clamp(0.75rem, 4vw, 3rem);
+}
+
+section #call-for-action-section #section-2-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+section #call-for-action-section #section-2-grid #cta-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+#submit-form {
+  max-width: 100%;
+}
+
+#starting-form form #form-group input,
+#starting-form form #form-group select {
+  min-width: 0;
+}
+
+/* Dashboard layout */
+#hero-section,
+#subject-section,
+#navigation-container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+#hero-section #welcome-message,
+#hero-section #welcome-image {
+  min-width: 0;
+}
+
+section #subject-section-header,
+#navigation-container #navigation-section-header {
+  padding-inline: 0;
+}
+
+section #subject-grid,
+#navigation-container #navigation-grid {
+  width: 100%;
+  padding-inline: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+section #subject-grid #subject-card,
+#navigation-container #navigation-grid #navigation-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  overflow-wrap: anywhere;
+}
+
+footer {
+  width: 100%;
+}
+
+footer #top-box {
+  width: min(100%, 1200px);
+  gap: 2rem;
+}
+
+footer #bottom-box {
+  width: min(100%, 800px);
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  section #call-for-action-section #section-2-grid,
+  section #subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #navigation-container #navigation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #hero-section #welcome-message {
+    padding: 1rem;
+  }
+
+  #hero-section #welcome-message span {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+/* Phones */
+@media (max-width: 700px) {
+  section #container {
+    grid-template-columns: 1fr;
+    width: min(100% - 1.5rem, 600px);
+  }
+
+  section #call-for-action-section #section-2-grid,
+  section #subject-grid,
+  #navigation-container #navigation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #hero-section {
+    width: min(100% - 1.5rem, 600px);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  #hero-section #welcome-message,
+  #hero-section #welcome-image {
+    width: 100%;
+  }
+
+  #hero-section #welcome-message {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  #hero-section #welcome-message #welcome-list {
+    text-align: left;
+    padding-left: 1.25rem;
+  }
+
+  #hero-section #welcome-message #headlines {
+    font-size: 0.75rem;
+  }
+
+  #hero-section #welcome-message #cta-btns {
+    width: 100%;
+    max-width: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #hero-section #welcome-message #cta-btns button {
+    width: 100%;
+  }
+
+  section #subject-section-header,
+  #navigation-container #navigation-section-header {
+    padding-inline: 0;
+  }
+
+  footer {
+    padding-inline: 1rem;
+  }
+
+  footer #top-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer #top-box #left {
+    width: 100%;
+  }
+
+  footer #right > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  footer #right a {
+    margin-right: 0;
+  }
+
+  footer #bottom-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  footer #bottom-box a {
+    margin-left: 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  section #container #landing-info {
+    padding-inline: 0;
+  }
+
+  #starting-form {
+    padding-inline: 0;
+  }
+
+  #starting-form form {
+    padding: 1.25rem;
+  }
+
+  section #call-for-action-section {
+    padding-inline: 0.75rem;
+  }
+
+  section #call-for-action-section #section-2-grid #cta-card,
+  section #subject-grid #subject-card,
+  #navigation-container #navigation-grid #navigation-card {
+    padding: 1.25rem;
+  }
+
+  #logo-container span,
+  #name-container h3 {
+    display: none;
+  }
 }
