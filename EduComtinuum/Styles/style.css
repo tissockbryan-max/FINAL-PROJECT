@@ -17,6 +17,7 @@
   --secon-color: hsl(0, 0%, 20%);
   --text-color: hsl(0, 0%, 60%);
 }
+
 body {
   background: var(--main-color);
   font-family: Arial, sans-serif;
