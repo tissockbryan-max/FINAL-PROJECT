@@ -4,13 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found</title>
+    <style>
+      :root {
+        --main-color: hsl(183, 100%, 97%);
+        --main-white-color: hsl(0, 0%, 100%);
+        --prim-color: hsl(0, 100%, 60%);
+        --shadow-color: hsl(0, 100%, 70%);
+        --secon-color: hsl(0, 0%, 20%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(1rem, 3vw, 2rem);
+        font-family: Arial, sans-serif;
+        background: var(--main-color);
+      }
+
+      #error-container {
+        width: min(100%, 42rem);
+        text-align: center;
+        padding: clamp(1rem, 2vw, 1.5rem);
+      }
+
+      #error-image {
+        display: block;
+        width: min(100%, 32rem);
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto clamp(1rem, 2vw, 1.5rem);
+      }
+
+      #home-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1.25rem 1rem;
+        border-radius: 1rem;
+        font-size: clamp(0.95rem, 1.8vw, 1rem);
+        font-weight: 600;
+        text-decoration: none;
+        background: var(--prim-color);
+        color: var(--main-white-color);
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 0 0 transparent;
+      }
+
+      #home-link:hover {
+        box-shadow: 0px 0px 10px var(--prim-color);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 1rem;
+        }
+
+        #error-container {
+          width: 100%;
+        }
+
+        #home-link {
+          width: 100%;
+          padding-block: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <img
-      src="./assets/resources/images/404-Error.png"
-      alt="404 not found img"
-    />
-    <p></p>
-    <a href=""></a>
+    <div id="error-container">
+      <img
+        id="error-image"
+        src="../assests/resources/images/images/404-Error.png"
+        alt="404 not found illustration"
+      />
+      <h2 style="color: var(--secon-color)">Oops! Page Not Found</h2>
+      <div>
+        <a id="home-link" href="../index.html">Go to Home</a>
+      </div>
+    </div>
   </body>
 </html>
