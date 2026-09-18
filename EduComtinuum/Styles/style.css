@@ -526,7 +526,8 @@ header {
   /* background: var(--main-color); */
   border-bottom: 2px solid var(--shadow-color);
   backdrop-filter: blur(5px);
-  position: fixed;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1286,4 +1287,8 @@ footer #bottom-box {
   #name-container h3 {
     display: none;
   }
+}
+
+section #teachers-section {
+  border: 1px solid red;
 }

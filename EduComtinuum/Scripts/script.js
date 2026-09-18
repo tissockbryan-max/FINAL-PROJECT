@@ -20,10 +20,12 @@ if (submitForm) {
 
 const firstLetter = document.getElementById("first-letter");
 const userName = document.getElementById("name");
-const savedStudentName = localStorage.getItem("studentName");
+const savedStudentName = localStorage.getItem("studentName") || "Student";
 const name0nWelcome = document.getElementById("welcome-name");
 
-name0nWelcome.textContent = savedStudentName;
+if (name0nWelcome) {
+  name0nWelcome.textContent = savedStudentName;
+}
 
 if (firstLetter && userName) {
   firstLetter.textContent = savedStudentName.charAt(0).toUpperCase();
