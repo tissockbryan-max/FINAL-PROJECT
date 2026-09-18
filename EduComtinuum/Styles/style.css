@@ -966,7 +966,11 @@ section #subject-grid #subject-card #btn:hover {
   justify-content: center;
 }
 
-#navigation-container #navigation-grid #navigation-card #btn {
+#navigation-container #navigation-grid #navigation-card #btn,
+#navigation-container #navigation-grid #navigation-card a[id$="nav-btn"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   border: none;
   width: 60%;
@@ -976,10 +980,12 @@ section #subject-grid #subject-card #btn:hover {
   color: var(--main-white-color);
   background-color: var(--prim-color);
   cursor: pointer;
+  text-decoration: none;
   transition: box-shadow 0.8s ease-in-out;
 }
 
-#navigation-container #navigation-grid #navigation-card #btn:hover {
+#navigation-container #navigation-grid #navigation-card #btn:hover,
+#navigation-container #navigation-grid #navigation-card a[id$="nav-btn"]:hover {
   box-shadow: 0px 0px 20px var(--shadow-color);
 }
 
