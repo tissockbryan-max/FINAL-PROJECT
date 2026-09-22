@@ -21,15 +21,12 @@ const SUBJECTS = {
   lessonNumber: [10, 12, 9, 5, 13, 10, 15],
 };
 
-let count = 0;
+const subjectGrid = document.getElementById("subject-grid");
 
-for (let count; count <= SUBJECTS.name.length; count++) {
-  let subjectGrid = document.getElementById("subject-grid");
-
+for (let count = 0; count < SUBJECTS.name.length; count++) {
   //CREATE THE ARTICLE
-
   let subjectCard = document.createElement("article");
-  article.id = "subject-card";
+  subjectCard.id = "subject-card";
 
   // FOR ICON
   let subjectIcon = document.createElement("div");
@@ -42,7 +39,7 @@ for (let count; count <= SUBJECTS.name.length; count++) {
 
   // FOR LESSONS
   let subjectLesson = document.createElement("p");
-  subjectName.id = "subject-desc";
+  subjectLesson.id = "subject-desc";
   subjectLesson.textContent = SUBJECTS.lesson[count];
 
   // FOR AMOUNT LESSONS
@@ -62,6 +59,7 @@ for (let count; count <= SUBJECTS.name.length; count++) {
   subjectCard.appendChild(subjectIcon);
   subjectCard.appendChild(subjectIcon);
   subjectCard.appendChild(subjectLesson);
+  subjectCard.appendChild(numberOfLesson);
   subjectCard.appendChild(btnContainer);
 
   subjectGrid.appendChild(subjectCard);
