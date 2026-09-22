@@ -45,7 +45,7 @@ for (let count = 0; count < SUBJECTS.name.length; count++) {
   // FOR AMOUNT LESSONS
   let numberOfLesson = document.createElement("p");
   numberOfLesson.id = "subject-lessons";
-  numberOfLesson.textContent = SUBJECTS.lessonNumber[count];
+  numberOfLesson.textContent = SUBJECTS.lessonNumber[count] + " Lessons";
 
   // FOR BUTTON CONTAINER
   let btnContainer = document.createElement("div");
