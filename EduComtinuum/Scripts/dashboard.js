@@ -1,11 +1,11 @@
-const SUBJECTS = [
-  {
-    icon: [],
-    name: [],
-    lesson: [],
-    lessonNumber: [],
-  },
-];
+const SUBJECTS = {
+  icon: [],
+  name: [],
+  lesson: [],
+  lessonNumber: [],
+};
+
+for (let i; i <= SUBJECTS.name.length; i++) {}
 
 //CREATE THE ARTICLE
 
@@ -15,21 +15,21 @@ article.id = "subject-card";
 // FOR ICON
 let subjectIcon = document.createElement("div");
 icon.id = "subject-icon";
-icon.textContent = SUBJECTS[i].icon[i];
+icon.textContent = SUBJECTS.icon[i];
 
 // FOR NAME
 let subjectName = document.createElement("h3");
-subjectName.textContent = SUBJECTS[i].name[i];
+subjectName.textContent = SUBJECTS.name[i];
 
 // FOR LESSONS
 let subjectLesson = document.createElement("p");
 subjectName.id = "subject-desc";
-subjectLesson.textContent = SUBJECTS[i].lesson[i];
+subjectLesson.textContent = SUBJECTS.lesson[i];
 
 // FOR AMOUNT LESSONS
 let numberOfLesson = document.createElement("p");
 numberOfLesson.id = "subject-lessons";
-numberOfLesson.textContent = SUBJECTS[i].lessonNumber[i];
+numberOfLesson.textContent = SUBJECTS.lessonNumber[i];
 
 // FOR BUTTON CONTAINER
 let btnContainer = document.createElement("div");
