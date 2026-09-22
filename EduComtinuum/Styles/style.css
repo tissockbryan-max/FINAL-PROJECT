@@ -5,6 +5,10 @@
   color: var(--secon-color);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .border {
   border: 1px solid grey;
 }
