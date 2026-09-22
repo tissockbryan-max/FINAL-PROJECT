@@ -55,6 +55,10 @@ for (let count = 0; count < SUBJECTS.name.length; count++) {
   btn.id = "btn";
   btn.textContent = "Continue";
   btnContainer.appendChild(btn);
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = "404.html";
+  });
 
   subjectCard.appendChild(subjectIcon);
   subjectCard.appendChild(subjectIcon);
@@ -64,3 +68,8 @@ for (let count = 0; count < SUBJECTS.name.length; count++) {
 
   subjectGrid.appendChild(subjectCard);
 }
+
+// let continueBtn = (event) => {
+//   event.preventDefault();
+//   window.location.href = "404.html";
+// };
