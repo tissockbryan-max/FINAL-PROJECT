@@ -55,6 +55,7 @@ userName.textContent = savedStudentName.slice(0, savedStudentName.indexOf(" "));
 const name0nWelcome = document.getElementById("welcome-name");
 name0nWelcome.textContent = savedStudentName.slice(
   savedStudentName.indexOf(" "),
+  savedStudentName.lastIndexOf(" "),
 );
 
 /**
