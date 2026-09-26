@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduContinuum</title>
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div id="container">
+          <div id="landing-info">
+            <div id="logo-name">
+              <i class="fas fa-graduation-cap"></i>
+              <h1 id="landing-heading">EduContinuum</h1>
+            </div>
+            <p id="landing-passage">
+              Your classroom may be temporarily closed, but your learning
+              doesn't have to stop. Join hundreds of students in Bamenda
+              studying safely from home.
+            </p>
+            <div id="badges">
+              <div><span>✓ </span>Free Resources</div>
+              <div><span>✓ </span>Learn For Free</div>
+              <div><span>✓ </span>Meet Teachers</div>
+            </div>
+          </div>
+          <div id="starting-form">
+            <form id="submit-form" action="" method="get">
+              <h2>Get Started</h2>
+              <div id="form-group">
+                <i class="fa-solid fa-user"></i>
+                <input
+                  type="text"
+                  id="student-name"
+                  placeholder="Full Name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div id="form-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input
+                  type="email"
+                  id="student-email"
+                  placeholder="Email Address"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div id="form-group">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <select id="student-class" required>
+                  <option value="">Select your class</option>
+                  <option value="Form 1">Form 1</option>
+                  <option value="Form 2">Form 2</option>
+                  <option value="Form 3">Form 3</option>
+                  <option value="Form 4">Form 4</option>
+                  <option value="Form 5">Form 5</option>
+                  <option value="Lower Sixth">Lower Sixth</option>
+                  <option value="Upper Sixth">Upper Sixth</option>
+                </select>
+              </div>
+              <div id="form-group">
+                <i class="fa-solid fa-school"></i>
+                <input
+                  type="text"
+                  id="student-school"
+                  placeholder="School Name"
+                  required
+                />
+              </div>
+              <button type="submit" id="submit-btn">
+                Enter <span>→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div id="call-for-action-section">
+          <div id="section-2-header">
+            <p>Why EduContinuum Hub?</p>
+            <h2>Everything You Need to Keep Studying</h2>
+          </div>
+          <div id="section-2-grid">
+            <article id="cta-card">
+              <div id="cta-icon">📚</div>
+              <h3>Learning Resources</h3>
+              <p id="cta-desc">
+                Access notes, practice materials and lesson content across all
+                major subjects, organised and easy to find.
+              </p>
+            </article>
+            <article id="cta-card">
+              <div id="cta-icon">👨‍🏫</div>
+              <h3>Qualified Teachers</h3>
+              <p id="cta-desc">
+                Browse a list of experienced teachers across all subjects who
+                are ready to support your learning from home.
+              </p>
+            </article>
+            <article id="cta-card">
+              <div id="cta-icon">📊</div>
+              <h3>Track Your Progress</h3>
+              <p id="cta-desc">
+                See which subjects and lessons you have completed, and keep
+                track of how far along you are in each topic.
+              </p>
+            </article>
+            <article id="cta-card">
+              <div id="cta-icon">🎓</div>
+              <h3>Six Core Subjects</h3>
+              <p id="cta-desc">
+                Mathematics, Physics, Chemistry, Biology, English and Computer
+                Science — covering all major secondary school subjects.
+              </p>
+            </article>
+            <article id="cta-card">
+              <div id="cta-icon">📱</div>
+              <h3>Works on Any Device</h3>
+              <p id="cta-desc">
+                Whether you are using a phone, tablet or computer, the platform
+                is designed to work well on any screen size.
+              </p>
+            </article>
+            <article id="cta-card">
+              <div id="cta-icon">🔒</div>
+              <h3>Private & Safe</h3>
+              <p id="cta-desc">
+                No accounts, no passwords, no data sent anywhere. Your
+                information stays on your own device at all times.
+              </p>
+            </article>
+          </div>
+          <div id="section-2-start">
+            <h2>Ready to Start Learning?</h2>
+            <p>
+              Your future is still worth working for. Take the next step today.
+            </p>
+            <a
+              href="#form-heading"
+              id="btn"
+              onclick="document.getElementById('student-name').focus()"
+            >
+              Enter Your Details Above
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="top-box">
+        <div id="left">
+          <h3><i class="fa-solid fa-graduation-cap"></i> EduContinuum</h3>
+          <p>
+            A simple learning space designed to help students continue learning
+            from home.
+          </p>
+          <small>version 1.0.0</small>
+        </div>
+        <div id="right">
+          <h3>navigation</h3>
+          <div>
+            <a href="">Dashboard</a>
+            <a href="">Resources</a>
+            <a href="">Teachers</a>
+            <a href="">Progress</a>
+          </div>
+        </div>
+      </div>
+      <div id="bottom-box">
+        <a href="">© 2026</a>
+        <a href="">EduContinuum</a>
+        <a href="">Privacy Policy</a>
+      </div>
+    </footer>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>
