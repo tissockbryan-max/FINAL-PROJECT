@@ -34,7 +34,7 @@
             </div>
           </div>
           <div id="starting-form">
-            <form id="submit-form" action="" method="get">
+            <form id="submit-form" type="submit" action="" method="get">
               <h2>Get Started</h2>
               <div id="form-group">
                 <i class="fa-solid fa-user"></i>
@@ -43,9 +43,9 @@
                   id="student-name"
                   placeholder="Full Name"
                   autocomplete="name"
-                  required
                 />
               </div>
+              <small id="errorForName" role="alert"></small>
               <div id="form-group">
                 <i class="fa-solid fa-envelope"></i>
                 <input
@@ -53,12 +53,12 @@
                   id="student-email"
                   placeholder="Email Address"
                   autocomplete="email"
-                  required
                 />
               </div>
+              <small id="errorForEmail" role="alert"></small>
               <div id="form-group">
                 <i class="fa-solid fa-graduation-cap"></i>
-                <select id="student-class" required>
+                <select id="student-class">
                   <option value="">Select your class</option>
                   <option value="Form 1">Form 1</option>
                   <option value="Form 2">Form 2</option>
@@ -75,9 +75,9 @@
                   type="text"
                   id="student-school"
                   placeholder="School Name"
-                  required
                 />
               </div>
+              <small id="errorForSchool" role="alert"></small>
               <button type="submit" id="submit-btn">
                 Enter <span>→</span>
               </button>

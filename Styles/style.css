@@ -178,6 +178,17 @@ section #container #landing-info #badges div span {
   min-width: 0;
 }
 
+#starting-form form small {
+  text-align: center;
+  color: var(--main-color);
+  transition: all 0.4s ease-in-out;
+  font-size: 0.65rem;
+}
+
+#starting-form form small:active {
+  transition: all 0.4s ease-in-out;
+}
+
 #starting-form form #form-group i {
   font-size: 1.5rem;
   color: var(--main-white-color);
@@ -974,6 +985,7 @@ section #subject-grid #subject-card #btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 #navigation-container #navigation-grid #navigation-card #btn,
@@ -1181,6 +1193,9 @@ footer #bottom-box {
 
 /* Tablets */
 @media (max-width: 900px) {
+  header {
+    position: sticky;
+  }
   section #call-for-action-section #section-2-grid,
   section #subject-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1201,6 +1216,10 @@ footer #bottom-box {
 
 /* Phones */
 @media (max-width: 700px) {
+  header {
+    position: sticky;
+  }
+
   section #container {
     grid-template-columns: 1fr;
     width: min(100% - 1.5rem, 600px);
@@ -1297,6 +1316,10 @@ footer #bottom-box {
 @media (max-width: 420px) {
   section #container #landing-info {
     padding-inline: 0;
+  }
+
+  header {
+    position: sticky;
   }
 
   #starting-form {

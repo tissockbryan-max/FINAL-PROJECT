@@ -4,75 +4,92 @@
  * date: 09/23/2026
  */
 
-// submitForm -> stores the form being gotten by id.
 let submitForm = document.getElementById("submit-form");
+let studentName = document.getElementById("student-name");
+let studentEmail = document.getElementById("student-email");
+let studentClass = document.getElementById("student-class");
+let school = document.getElementById("student-school");
+let errorName = document.getElementById("errorForName");
+let errorEmail = document.getElementById("errorForEmail");
+let errorSchool = document.getElementById("errorForSchool");
 
-if (submitForm) {
+/**
+ *
+ * If statement that acts on the input form.
+ * submitForm -> stores the form being gotten by id.
+ * studentName -> stores the student's name.
+ * studentEmail -> stores the student's email.
+ * studentClass -> stores the student's class.
+ * school -> stores name of the student's school.
+ */
+
+function validateStudentForm(studentName, studentEmail, school) {
   /**
-   * If statement that acts on the input form.
-   * studentName -> stores the student's name.
-   * studentEmail -> stores the student's email.
-   * studentClass -> stores the student's class.
-   * school -> stores name of the student's school.
+   * Function to validate the input form that is to be filled by the student,
+   * returns a boolean that is used in an if statement within the forms eventlistener,
+   * takes the following as parameters:
+   * studentName, studentEmail, studentClass, school
    */
-  let studentName = document.getElementById("student-name");
-  let studentEmail = document.getElementById("student-email");
-  let studentClass = document.getElementById("student-class");
-  let school = document.getElementById("student-school");
+  errorName.textContent = "";
+  errorEmail.textContent = "";
+  errorSchool.textContent = "";
+  studentName = studentName.value.trim();
+  studentEmail = studentEmail.value.trim();
+  school = school.value.trim();
 
-  submitForm.addEventListener("submit", function (event) {
-    /**
-     * Event listener for the input form.
-     * event.preventDefault() to prevent page
-     * from refreshing defaultly.
-     */
+  let valid = true;
+  if (studentName === "") {
+    errorName.textContent = "Full name required";
+    // errorName.style.color = "white";
+    valid = false;
+  } else if (!isNaN(studentName)) {
+    errorName.textContent = "Name can not be a number";
+    // errorName.style.color = "white";
+    valid = false;
+  }
+  if (studentEmail === "") {
+    errorEmail.textContent = "Email is required";
+    // errorName.style.color = "white";
+    valid = false;
+  } else if (
+    studentEmail.slice(studentEmail.indexOf("@") + 1) !== "gmail.com"
+  ) {
+    errorEmail.textContent = "Invalid email address";
+    valid = false;
+  }
+  if (school === "") {
+    errorSchool.textContent = "School is required";
+    // errorName.style.color = "white";
+    valid = false;
+  } else if (!isNaN(school)) {
+    errorSchool.textContent = "School can not be a  number";
+    // errorName.style.color = "white";
+    valid = false;
+  }
 
-    event.preventDefault();
-    localStorage.setItem("studentName", studentName.value.trim());
-    localStorage.setItem("studentClass", studentClass.value);
-    localStorage.setItem("studentEmail", studentEmail.value);
-    localStorage.setItem("studentSchool", school.value);
+  console.log("done!");
+  return valid;
+}
 
+submitForm.addEventListener("submit", (e) => {
+  /**
+   * Event listener for the input form.
+   * event.preventDefault() to prevent page
+   * from refreshing defaultly.
+   */
+  e.preventDefault();
+  const result = validateStudentForm(studentName, studentEmail, school);
+  if (!result) {
+    return;
+  } else {
     // Change page that the user is viewing to the dashboard page.
     window.location.href = "Pages/dashboard.html";
-  });
-}
+    localStorage.setItem("studentName", studentName.value.trim());
+    localStorage.setItem("studentClass", studentClass.value);
+    localStorage.setItem("studentEmail", studentEmail.value.trim());
+    localStorage.setItem("studentSchool", school.value.trim());
+  }
+});
 
-/**
- * savedStudentName -> stores the saved studentName that was stored inside the localStorage.
- * firstLetter -> stores the 1st letter of the students name.
- * userName -> stores the user's name to be displayed in the name container.
- * nameOnWelcome -> stores the name thath will be displayed in the hero-section beside the image.
- */
-const savedStudentName = localStorage.getItem("studentName") || "Student";
-
-// for the name container.
-const firstLetter = document.getElementById("first-letter");
-firstLetter.textContent = savedStudentName.charAt(0).toUpperCase();
-const userName = document.getElementById("name");
-userName.textContent = savedStudentName.slice(0, savedStudentName.indexOf(" "));
-
-const name0nWelcome = document.getElementById("welcome-name");
-name0nWelcome.textContent = savedStudentName.slice(
-  savedStudentName.indexOf(" "),
-);
-
-/**
- * for the navigation bar.
- * head -> stores the header of the page.
- * hamburgerMenu -> icon button for opening navbar manualy when on small sized screens.
- * cancel -> stores the cancel button which switches with thw hamburgerMenu when clicked
- * and also removes the navbar from display.
- */
-let header = document.querySelector("header");
-let hamburgerMenu = document.getElementById("hamburger-menu");
-let cancel = document.getElementById("cancel");
-
-if (header && hamburgerMenu && cancel) {
-  hamburgerMenu.addEventListener("click", function () {
-    header.classList.add("menu-open");
-  });
-  cancel.addEventListener("click", function () {
-    header.classList.remove("menu-open");
-  });
-}
+var email = "tissockbryan@gmail.com";
+console.log(email.slice(email.indexOf("@") + 1));
