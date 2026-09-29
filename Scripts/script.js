@@ -83,6 +83,7 @@ submitForm.addEventListener("submit", (e) => {
   } else {
     // Change page that the user is viewing to the dashboard page.
     window.location.href = "Pages/dashboard.html";
+    // Storing user information in the browser's storage.
     localStorage.setItem("studentName", studentName.value.trim());
     localStorage.setItem("studentClass", studentClass.value);
     localStorage.setItem("studentEmail", studentEmail.value.trim());
