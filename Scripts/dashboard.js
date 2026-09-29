@@ -4,14 +4,13 @@
  * date: 09/23/2026
  */
 
+/**
+ * SUBJECTS_OBJECT -> Stores each subject can will be displayed in the site.
+ * icon -> list of icons used for each subject card.
+ * name -> list of sibjects on the page.
+ * lesson -> Details and subtopics about the subjects provided
+ */
 const SUBJECTS = {
-  /**
-   * SUBJECTS_OBJECT -> Stores each subject can will be displayed in the site.
-   * icon -> list of icons used for each subject card.
-   * name -> list of sibjects on the page.
-   * lesson -> Details and subtopics about the subjects provided
-   */
-
   icon: ["📚", "🧪", "🌿", "📖", "💻", "⚛", "🧠"],
   name: [
     "Mathematics",
@@ -34,25 +33,24 @@ const SUBJECTS = {
   lessonNumber: [10, 12, 9, 5, 13, 10, 15],
 };
 
+/**
+ * For loop for iterating through the subjects
+ * to be displayed.
+ *
+ * count -> the iterator used in the loop.
+ * subjectCard -> stores the created article that makes up the card.
+ * subjectIcon -> stores the created div that further stores the icon.
+ * subjectName -> stores the created h3 used for the subject name.
+ * subjectLesson -> stores the paragraph containing the subject subtopics.
+ * numberOfLesson -> stores the paragraph containing the number of lessons for each subject.
+ * btnContainer -> stores the div created to contain a button.
+ * btn -> stores the created button which is inside the btnContainer.
+ */
 function subjectItems() {
   // subject grid -> container where each subject card will be displayed.
   const subjectGrid = document.getElementById("subject-grid");
 
   for (let count = 0; count < SUBJECTS.name.length; count++) {
-    /**
-     * For loop for iterating through the subjects
-     * to be displayed.
-     *
-     * count -> the iterator used in the loop.
-     * subjectCard -> stores the created article that makes up the card.
-     * subjectIcon -> stores the created div that further stores the icon.
-     * subjectName -> stores the created h3 used for the subject name.
-     * subjectLesson -> stores the paragraph containing the subject subtopics.
-     * numberOfLesson -> stores the paragraph containing the number of lessons for each subject.
-     * btnContainer -> stores the div created to contain a button.
-     * btn -> stores the created button which is inside the btnContainer.
-     */
-
     // article
     let subjectCard = document.createElement("article");
     subjectCard.id = "subject-card";
@@ -102,14 +100,14 @@ function subjectItems() {
   }
 }
 
+/**
+ * for the navigation bar.
+ * head -> stores the header of the page.
+ * hamburgerMenu -> icon button for opening navbar manualy when on small sized screens.
+ * cancel -> stores the cancel button which switches with thw hamburgerMenu when clicked
+ * and also removes the navbar from display.
+ */
 function navigationBar() {
-  /**
-   * for the navigation bar.
-   * head -> stores the header of the page.
-   * hamburgerMenu -> icon button for opening navbar manualy when on small sized screens.
-   * cancel -> stores the cancel button which switches with thw hamburgerMenu when clicked
-   * and also removes the navbar from display.
-   */
   let header = document.querySelector("header");
   let hamburgerMenu = document.getElementById("hamburger-menu");
   let cancel = document.getElementById("cancel");
@@ -124,13 +122,13 @@ function navigationBar() {
   }
 }
 
+/**
+ * savedStudentName -> stores the saved studentName that was stored inside the localStorage.
+ * firstLetter -> stores the 1st letter of the students name.
+ * userName -> stores the user's name to be displayed in the name container.
+ * nameOnWelcome -> stores the name thath will be displayed in the hero-section beside the image.
+ */
 function headerAndHero() {
-  /**
-   * savedStudentName -> stores the saved studentName that was stored inside the localStorage.
-   * firstLetter -> stores the 1st letter of the students name.
-   * userName -> stores the user's name to be displayed in the name container.
-   * nameOnWelcome -> stores the name thath will be displayed in the hero-section beside the image.
-   */
   const savedStudentName = localStorage.getItem("studentName") || "Student";
 
   // for the name container.

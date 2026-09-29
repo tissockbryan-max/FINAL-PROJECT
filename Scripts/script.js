@@ -14,6 +14,10 @@ let errorEmail = document.getElementById("errorForEmail");
 let errorSchool = document.getElementById("errorForSchool");
 
 /**
+ *Function to validate the input form that is to be filled by the student,
+ * returns a boolean that is used in an if statement within the forms eventlistener,
+ * takes the following as parameters:
+ * studentName, studentEmail, studentClass, school
  *
  * If statement that acts on the input form.
  * submitForm -> stores the form being gotten by id.
@@ -24,12 +28,6 @@ let errorSchool = document.getElementById("errorForSchool");
  */
 
 function validateStudentForm(studentName, studentEmail, school) {
-  /**
-   * Function to validate the input form that is to be filled by the student,
-   * returns a boolean that is used in an if statement within the forms eventlistener,
-   * takes the following as parameters:
-   * studentName, studentEmail, studentClass, school
-   */
   errorName.textContent = "";
   errorEmail.textContent = "";
   errorSchool.textContent = "";
