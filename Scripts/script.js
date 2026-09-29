@@ -37,31 +37,32 @@ function validateStudentForm(studentName, studentEmail, school) {
 
   let valid = true;
   if (studentName === "") {
-    errorName.textContent = "Full name required";
-    // errorName.style.color = "white";
+    errorName.textContent = "Full name required!";
     valid = false;
   } else if (!isNaN(studentName)) {
-    errorName.textContent = "Name can not be a number";
-    // errorName.style.color = "white";
+    errorName.textContent = "Name can not be a number!";
+    valid = false;
+  } else if (studentName.length <= 3) {
+    errorName.textContent = "Enter your [Full Name] !";
     valid = false;
   }
   if (studentEmail === "") {
-    errorEmail.textContent = "Email is required";
-    // errorName.style.color = "white";
+    errorEmail.textContent = "Email is required!";
     valid = false;
   } else if (
     studentEmail.slice(studentEmail.indexOf("@") + 1) !== "gmail.com"
   ) {
-    errorEmail.textContent = "Invalid email address";
+    errorEmail.textContent = "Invalid email address!";
     valid = false;
   }
   if (school === "") {
-    errorSchool.textContent = "School is required";
-    // errorName.style.color = "white";
+    errorSchool.textContent = "School is required!";
     valid = false;
   } else if (!isNaN(school)) {
-    errorSchool.textContent = "School can not be a  number";
-    // errorName.style.color = "white";
+    errorSchool.textContent = "School can not be a  number!";
+    valid = false;
+  } else if (school.length < 4) {
+    errorSchool.textContent = "Enter a valid school name!";
     valid = false;
   }
 
@@ -69,12 +70,12 @@ function validateStudentForm(studentName, studentEmail, school) {
   return valid;
 }
 
+/**
+ * Event listener for the input form.
+ * event.preventDefault() to prevent page
+ * from refreshing defaultly.
+ */
 submitForm.addEventListener("submit", (e) => {
-  /**
-   * Event listener for the input form.
-   * event.preventDefault() to prevent page
-   * from refreshing defaultly.
-   */
   e.preventDefault();
   const result = validateStudentForm(studentName, studentEmail, school);
   if (!result) {
