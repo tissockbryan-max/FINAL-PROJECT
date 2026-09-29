@@ -31,11 +31,8 @@ function validateStudentForm(studentName, studentEmail, school) {
   errorName.textContent = "";
   errorEmail.textContent = "";
   errorSchool.textContent = "";
-  studentName = studentName.value.trim();
-  studentEmail = studentEmail.value.trim();
-  school = school.value.trim();
-
   let valid = true;
+
   if (studentName === "") {
     errorName.textContent = "Full name required!";
     valid = false;
@@ -77,6 +74,9 @@ function validateStudentForm(studentName, studentEmail, school) {
  */
 submitForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  studentName = studentName.value.trim();
+  studentEmail = studentEmail.value.trim();
+  school = school.value.trim();
   const result = validateStudentForm(studentName, studentEmail, school);
   if (!result) {
     return;
