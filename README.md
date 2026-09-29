@@ -34,12 +34,20 @@ EduContinuum is a simple e-learning platform designed to help students continue 
 - VS Code — Development
 - Git & GitHub — Version control
 
+## 🔗 Hosted URL
+
+URL:
+
+```bash
+https://ranjoy-educontinuum.netlify.app/
+```
+
 ## 🚀 Getting Started
 
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/tissockbryan-max/FINAL-PROJECT
 ```
 
 Open the project folder and run `index.html` in a web browser.
